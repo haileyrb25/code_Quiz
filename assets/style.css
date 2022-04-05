@@ -1,0 +1,11 @@
+.header h1 {
+    padding-top: 100px;
+    color: purple;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.intro p {
+    padding: 20px;
+    text-align: center;
+}
