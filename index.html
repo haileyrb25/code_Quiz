@@ -10,19 +10,35 @@
 <body>
     <div>
         <header class="header">
-            <h1>Coding Quiz</h1>  
+            <h1>Coding Quiz</h1> 
+            <div class="timer">Time: <span id="time">0</span></div> 
         </header>
     </div>
 
     <div>
-        <main class="intro">
+        <!-- Intro DIV before starting quiz -->
+        <div id="intro">
             <p>For this challenge, you will be answering questions while a timer counts down your time. Remember, the quicker you answer the questions, the better your score! Score will be based on time and the number of questions answered correctly. Good Luck!</p>
+            <button id="startBtn">Start Quiz</button>
+            </div>
 
+            <!-- Questions DIV for duration of the quiz -->
+            <div id="questions" class="hide">
+                <h3 id="question-title"></h3>
+                <div id="choices"></div>
 
+            </div>
+
+            <!-- End screen DIV for after quiz is over (put initials and save score to localStorage) -->
+            <div id="end-screen" class="hide">
+                <input id="initials"/>
+                <button id="submitBtn">Save Score</button>
+
+            </div>
 
     </div>
   
-
+<script src="./assets/script.js"></script>
 </body>
 
 
