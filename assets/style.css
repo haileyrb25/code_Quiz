@@ -35,3 +35,10 @@
 .hide {
     display: none;
 }
+
+#questions {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(64, 121, 158); 
+    text-align: center;
+}
