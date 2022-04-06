@@ -11,38 +11,38 @@ var introDiv = document.querySelector("#intro");
 var choicesDiv = document.querySelector("#choices");
 var endScreenDiv = document.querySelector("#end-screen");
 var submitBtn = document.querySelector("#submitBtn");
-var timerSpan = document.querySelector("#time")
+var timerSpan = document.querySelector("#time");
+var intialEl = document.querySelector("#initials");
 var score = timerSpan
 
 var questions = [
     {
         title: "1. Rachel wrote a letter to Ross after they were on a break. How many pages did the letter have?",
         choices: ["a. 3 pages", "b. 18 pages, FRONT AND BACK", "c. 1 page", "d. 10 pages"],
-        answer: "b"
+        answer: "b. 18 pages, FRONT AND BACK"
     },
     {
         title: "2. Pheobe carried triplets for someone; who was it?",
         choices: ["a. Monica", "b. Rachel", "c. Her brother", "d. Her sister"],
-        answer: "c"
+        answer: "c. Her brother"
     },
     {
         title: "3. What two pets did Joey and Chandler have?",
         choices: ["a. cat and dog", "b. mouse and spider", "c. lizard and fish", "d. duck and chick"],
-        answer: "d"
+        answer: "d. duck and chick"
     },
     {
         title: "4. What was Monica's main profession?",
         choices: ["a. cook", "b. lawyer", "c. doctor", "d. teacher"],
-        answer: "a"
+        answer: "a. cook"
     },
     {
         title: "5. How many divorces did Ross have?",
         choices: ["a. 3", "b. 2", "c. 1", "d. 0"],
-        answer: "a"
+        answer: "a. 3"
     }
 ]
 
-startBtn.addEventListener("click", startQuiz)
 
 
 
@@ -52,6 +52,7 @@ questionsDiv.removeAttribute("class");
 
 // call start timer function here
 timerId = setInterval(tickingClock, 1000)
+
 // calling question function
 viewQuestion()
 
@@ -60,6 +61,9 @@ viewQuestion()
 function tickingClock(){
     time--;
     timerSpan.textContent = time;
+    if (time <= 0) {
+        endQuiz();
+    }
 }
 
 function viewQuestion(){
@@ -88,6 +92,12 @@ function handleClick(){
     if(this.value === questions[currentQuestionIndex].answer){
         // we have the correct answer
         correct++
+    } 
+    if(this.value !== questions[currentQuestionIndex].answer){
+        time -= 5;
+        if (time < 0 ) {
+            time = 0
+        }
     }
 
     currentQuestionIndex++;
@@ -100,6 +110,7 @@ function handleClick(){
 }
 
 function endQuiz(){
+    clearInterval(timerId);
     questionsDiv.setAttribute("class", "hide");
     endScreenDiv.removeAttribute("class");
     
@@ -113,12 +124,19 @@ function endQuiz(){
     // reset the timer to 0 / stop the timer- clear timer?
 }
 
-submitBtn.onclick = saveScore;
-
 function saveScore(){
     // handle saving initials and score to localstorage
     // use object to hold initials and score association
     
 }
+function enterHighScore(event){
+if (event.key === "Enter"){
+    saveScore()
+}
+}
 
 
+
+startBtn.addEventListener("click", startQuiz);
+submitBtn.onclick = saveScore;
+intialEl.onkeyup = enterHighScore;
