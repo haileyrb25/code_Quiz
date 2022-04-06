@@ -15,29 +15,29 @@ var timerSpan = document.querySelector("#time")
 
 var questions = [
     {
-        title: "this is question 1",
-        choices: ["a", "b", "c", "d"],
+        title: "1. How many pages did the letter Rachel wrote to Ross have?",
+        choices: ["a. 3 pages", "b. 18 pages, FRONT AND BACK", "c. 1 page", "d. 10 pages"],
         answer: "b"
     },
     {
-        title: "this is question 2",
-        choices: ["a", "b", "c", "d"],
-        answer: "b"
+        title: "2. Who's triplets did Pheobe carry?",
+        choices: ["a. Monica", "b. Rachel", "c. Her brother", "d. Her sister"],
+        answer: "c"
     },
     {
-        title: "this is question 3",
-        choices: ["a", "b", "c", "d"],
-        answer: "b"
+        title: "3. What two pets did Joey and Chandler have?",
+        choices: ["a. cat and dog", "b. mouse and spider", "c. lizard and fish", "d. duck and chick"],
+        answer: "d"
     },
     {
-        title: "this is question 4",
-        choices: ["a", "b", "c", "d"],
-        answer: "b"
+        title: "4. What was Monica's main profession?",
+        choices: ["a. cook", "b. lawyer", "c. doctor", "d. teacher"],
+        answer: "a"
     },
     {
-        title: "this is question 5",
-        choices: ["a", "b", "c", "d"],
-        answer: "b"
+        title: "5. How many divorces did Ross have?",
+        choices: ["a. 3", "b. 2", "c. 1", "d. 0"],
+        answer: "a"
     }
 ]
 
@@ -102,7 +102,7 @@ function endQuiz(){
     questionsDiv.setAttribute("class", "hide");
     endScreenDiv.removeAttribute("class");
 
-    // reset the timer to 0 / stop the timer
+    // reset the timer to 0 / stop the timer- clear timer?
 }
 
 submitBtn.onclick = saveScore;
