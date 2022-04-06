@@ -16,12 +16,12 @@ var score = timerSpan
 
 var questions = [
     {
-        title: "1. How many pages did the letter Rachel wrote to Ross have?",
+        title: "1. Rachel wrote a letter to Ross after they were on a break. How many pages did the letter have?",
         choices: ["a. 3 pages", "b. 18 pages, FRONT AND BACK", "c. 1 page", "d. 10 pages"],
         answer: "b"
     },
     {
-        title: "2. Who's triplets did Pheobe carry?",
+        title: "2. Pheobe carried triplets for someone; who was it?",
         choices: ["a. Monica", "b. Rachel", "c. Her brother", "d. Her sister"],
         answer: "c"
     },
