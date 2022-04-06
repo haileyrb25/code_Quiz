@@ -12,6 +12,7 @@ var choicesDiv = document.querySelector("#choices");
 var endScreenDiv = document.querySelector("#end-screen");
 var submitBtn = document.querySelector("#submitBtn");
 var timerSpan = document.querySelector("#time")
+var score = timerSpan
 
 var questions = [
     {
@@ -49,7 +50,7 @@ function startQuiz(){
 introDiv.setAttribute("class", "hide");
 questionsDiv.removeAttribute("class");
 
-// youre going to want to call your start timer function here
+// call start timer function here
 timerId = setInterval(tickingClock, 1000)
 // calling question function
 viewQuestion()
@@ -101,6 +102,13 @@ function handleClick(){
 function endQuiz(){
     questionsDiv.setAttribute("class", "hide");
     endScreenDiv.removeAttribute("class");
+    
+// function submitBtn() {
+//     let person = prompt("Please enter your intials to save your score", "")
+//     if (person != null) {
+//         document.getElementById("submitBtn").innerHTML =
+//         "Great Job" + person + "!";
+//     }
 
     // reset the timer to 0 / stop the timer- clear timer?
 }
@@ -110,7 +118,7 @@ submitBtn.onclick = saveScore;
 function saveScore(){
     // handle saving initials and score to localstorage
     // use object to hold initials and score association
-
+    
 }
 
 
