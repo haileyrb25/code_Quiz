@@ -16,7 +16,7 @@ Click this link to see my github activity for this repository! Here you will fin
 
 
 Here is what the final product looks like:
-![screenshot]()
+![screenshot](./assets/jpg/screencap.jpg)
 
 
 The criteria for the project is down below:
