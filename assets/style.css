@@ -1,14 +1,19 @@
-.header {
-    background-image: url();
+
+.header img {
+    padding: 0%;
+    margin: auto;
+    display: flex;
+    flex: content;
+    justify-content: center;
+    align-content: center;
 }
 
-
 .header h1 {
-    padding-top: 75px;
     margin-top: 0%;
-    color: rgb(221, 109, 80);
+    color: rgb(4, 5, 5);
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
 }
 
 
@@ -18,7 +23,7 @@
     flex: content;
     justify-content: flex-end;
     align-items: center;
-    color: rgb(54, 151, 70);
+    color: rgb(194, 55, 55);
 
 }
 
